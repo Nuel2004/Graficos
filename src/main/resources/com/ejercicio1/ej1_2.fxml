@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio1.controladores.ej1controllers2">
+<VBox fx:id="contenedor" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio1.controladores.ej1controllers2">
    <children>
-      <Button fx:id="boton2" mnemonicParsing="false" text="Button" />
-      <Label fx:id="label2" text="Label" />
+      <Label fx:id="etiqueta" text="Label" />
+      <Button fx:id="boton" mnemonicParsing="false" text="Button" />
    </children>
 </VBox>

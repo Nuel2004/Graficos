@@ -1,6 +1,10 @@
 package com.ejercicio1.controladores;
 
 import javafx.scene.control.Label;
+
+import com.ejercicio1.SceneID;
+import com.ejercicio1.SceneManager;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -19,15 +23,10 @@ public class ej1controllers {
     public void initialize() {
         texto.setPromptText("Hola tio");
         label.setText("Hola Mundo");
-        boton.setText("Pulsame si no eres gay");
+        boton.setText("Pulsame si quieres ir a la segunda ventana");
 
         boton.setOnAction(event -> {
-            String textoIntroducido = texto.getText();
-            if (textoIntroducido.isEmpty()) {
-                label.setText("No has escrito nada");
-            } else {
-                label.setText("Has escrito: " + textoIntroducido);
-            }
+            SceneManager.getInstance().loadScene(SceneID.SECONDARY);
         });
 
 

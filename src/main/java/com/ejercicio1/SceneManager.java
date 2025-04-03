@@ -33,6 +33,17 @@ public class SceneManager{
     }
 
     /**
+     * Inicializa el <code>SceneManager</code> con el <code>Stage</code> principal y la ruta de la hoja de estilo.
+     * 
+     * @param stage la ventana principal de la aplicación donde se mostrarán las escenas.
+     * @param styles el nombre de la hoja de estilo CSS a aplicar a las escenas.
+     */
+    @SuppressWarnings("exports")
+    public void init(Stage stage){
+        this.stage = stage;
+    }
+
+    /**
      * Establece una escena, cargando un archivo FXML y configurando su tamaño.
      * La escena también se asocia con la hoja de estilo definida previamente.
      * 
@@ -44,7 +55,7 @@ public class SceneManager{
     public void setScene(SceneID sceneID, String fxml, int width, int height){
         try {
             // Carga el archivo FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/" + fxml + ".fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, width, height); // Crea la escena con el tamaño especificado
             scenes.put(sceneID, scene); // Almacena la escena en el mapa con el identificador correspondiente
