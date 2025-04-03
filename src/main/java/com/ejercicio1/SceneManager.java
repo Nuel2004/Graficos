@@ -1,5 +1,6 @@
 package com.ejercicio1;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 
 import javafx.fxml.FXMLLoader;
@@ -36,7 +37,6 @@ public class SceneManager{
      * Inicializa el <code>SceneManager</code> con el <code>Stage</code> principal y la ruta de la hoja de estilo.
      * 
      * @param stage la ventana principal de la aplicación donde se mostrarán las escenas.
-     * @param styles el nombre de la hoja de estilo CSS a aplicar a las escenas.
      */
     @SuppressWarnings("exports")
     public void init(Stage stage){
@@ -55,7 +55,8 @@ public class SceneManager{
     public void setScene(SceneID sceneID, String fxml, int width, int height){
         try {
             // Carga el archivo FXML
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+            URL fxmlURL = App.class.getResource("views"+fxml + ".fxml");
+            FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root, width, height); // Crea la escena con el tamaño especificado
             scenes.put(sceneID, scene); // Almacena la escena en el mapa con el identificador correspondiente
@@ -73,11 +74,7 @@ public class SceneManager{
         scenes.remove(sceneID); // Elimina la escena del mapa
     }
 
-    /**
-     * Carga y muestra una escena previamente almacenada en el <code>SceneManager</code>.
-     * 
-     * @param sceneID el identificador único de la escena que se desea cargar.
-     */
+    
     public void loadScene(SceneID sceneID) {
         if (scenes.containsKey(sceneID)){
             stage.setScene(scenes.get(sceneID)); // Establece la escena en la ventana principal

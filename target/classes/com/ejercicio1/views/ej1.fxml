@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="contprincipal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio1.controladores.ej1controllers">
+   <children>
+      <ImageView fx:id="imagen" fitHeight="196.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true" />
+      <StackPane fx:id="contenedor2" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="label" prefHeight="122.0" prefWidth="142.0" text="Label" />
+            <Button fx:id="boton" mnemonicParsing="false" prefHeight="120.0" prefWidth="65.0" text="Button" />
+            <TextField fx:id="texto" />
+         </children>
+      </StackPane>
+   </children>
+</VBox>

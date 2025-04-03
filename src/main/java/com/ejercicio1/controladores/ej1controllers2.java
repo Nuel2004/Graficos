@@ -1,8 +1,11 @@
 package com.ejercicio1.controladores;
 
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
+import com.ejercicio1.App;
 import com.ejercicio1.SceneID;
 import com.ejercicio1.SceneManager;
 import javafx.fxml.FXML;
@@ -15,22 +18,21 @@ public class ej1controllers2 {
     private Label etiqueta;
     @FXML
     private VBox contenedor;
-
+    
     @FXML
     public void initialize() {
         etiqueta.setText(crono());
         boton.setText("Pulsame si no eres el fiti (y quieres ver la vista 1)");
+        
         boton.setOnAction(event -> {
             SceneManager.getInstance().loadScene(SceneID.MAIN);
         });
-
     }
-
-    public static String crono(){
+    public String crono(){
         String res = "";
-        for(int h=0; h<24; h++){        
-            for(int m=0; m<60; m++){
-                for(int s=0; s<60; s++){
+        for(int h=0; h<4; h++){        
+            for(int m=0; m<0; m++){
+                for(int s=0; s<30; s++){
                     res = h+":"+m+":"+s;
                     try {
                         Thread.sleep(1000);

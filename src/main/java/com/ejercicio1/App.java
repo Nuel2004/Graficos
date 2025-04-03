@@ -14,7 +14,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Establece el título de la ventana
-        stage.setTitle("Estructura base de una aplicación en JAVAFX");
+        stage.setTitle("La fokin app numero uno ");
         
         // Obtiene la instancia del SceneManager
         SceneManager sm = SceneManager.getInstance();
@@ -23,8 +23,8 @@ public class App extends Application {
         sm.init(stage);
         
         // Configura las escenas con identificadores y tamaños
-        sm.setScene(SceneID.MAIN, "ej1", 600, 900);
-        sm.setScene(SceneID.SECONDARY, "ej1_2", 600, 200);
+        sm.setScene(SceneID.MAIN, "/ej1", 600, 900);
+        sm.setScene(SceneID.SECONDARY, "/ej1_2", 600, 200);
         
         // Carga la escena principal
         sm.loadScene(SceneID.MAIN);
