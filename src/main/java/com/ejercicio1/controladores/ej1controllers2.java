@@ -3,7 +3,6 @@ package com.ejercicio1.controladores;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-import com.ejercicio1.App;
 import com.ejercicio1.SceneID;
 import com.ejercicio1.SceneManager;
 import javafx.fxml.FXML;
